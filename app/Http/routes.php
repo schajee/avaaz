@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/help/{page?}', 'HelpController@router');
+
+Route::get('/topics', 'TopicController@index');
+Route::get('/topics/{slug}', 'TopicController@show');
+
+Route::get('/polls', 'PollController@index');
+Route::get('/polls/{slug}', 'PollController@show')->where('slug', '[^0-9]+');

@@ -1,0 +1,55 @@
+
+body { background-color: #212121; color: #FAFAFA; }
+a, a:active, a:hover, a:focus { color: #FAFAFA; }
+
+.poll-title { margin-top: 0; }
+.navbar { border: none; }
+
+
+.nav>li>a { color: #9E9E9E; }
+.nav>li>a:focus, .nav>li>a:hover { background-color: transparent !important; color: #FAFAFA;}
+.navbar-btn { margin-left: 15px; }
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover { background-color: transparent; color: #FAFAFA; }
+
+.dropdown-menu { background-color: #424242; border: none; font-size: 0.875em; }
+.dropdown-menu>li>a { color: #FAFAFA; }
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover { background-color: #616161; color: #FAFAFA; }
+
+.page-header { border-bottom-color: #616161; }
+article { padding-top: 45px;    }
+
+.link { text-decoration: underline; }
+
+footer.navbar .nav>li>a:focus, footer.navbar .nav>li>a:hover { background-color: transparent !important; }
+
+ol { margin: 0; padding: 0; }
+
+p.text-muted { color: #9E9E9E; }
+
+.panel { background-color: #424242; }
+.panel-body { padding: 15px 25px;}
+
+hr { border-top-color: #616161; }
+
+
+input { color: #333; }
+
+.results { margin-top: 8px; }
+
+dt { color: #5cb85c; }
+
+
+/* Use this selector to override bar styles on bar charts. Bars are also strokes so you have maximum freedom in styling them. */
+.ct-bar { stroke: #5cb85c !important; }
+.ct-line, .ct-point { stroke: #5cb85c !important;  }
+
+.ct-series-a .ct-slice-pie { fill: hsl(120,39%,54%) !important; }
+.ct-series-b .ct-slice-pie { fill: hsl(120,39%,64%) !important; }
+.ct-series-c .ct-slice-pie { fill: hsl(120,39%,74%) !important; }
+.ct-series-d .ct-slice-pie { fill: hsl(120,39%,84%) !important; }
+
+
+.ct-label { color: #FAFAFA; font-size: 0.75em; }
+.ct-grid { stroke: #333; }
+text.ct-label { fill: #212121 !important; }
