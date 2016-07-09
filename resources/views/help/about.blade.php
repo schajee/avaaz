@@ -4,7 +4,7 @@
 <section>
     <div class="container">
         <div class="page-header">
-            <h1>About Avaaz</h1>
+            <h1>About Us</h1>
         </div>
         <blockquote>
             <p>We change the world one client at a time through extraordinary analytics and advice on everything important facing humankind.</p>

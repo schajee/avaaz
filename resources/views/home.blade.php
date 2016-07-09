@@ -12,7 +12,7 @@
                     <p class="text-muted">{{$poll->description}}</p>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
-                    @include ('partials.poll')
+                    @include ('polls.item')
                 </div>
             </div>
         </article>

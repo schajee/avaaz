@@ -19,4 +19,9 @@ class HomeController extends Controller
             'poll' => $poll,
         ]);
     }
+
+    public function info()
+    {
+        return phpinfo();
+    }
 }

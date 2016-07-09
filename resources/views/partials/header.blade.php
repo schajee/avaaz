@@ -4,10 +4,18 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Avaaz</title>
+        @if (isset($description))
+        <meta name="description" content="{{$description}}">
+        @endif
+        @if (isset($title))
+        <title>{{$title}} - Avaaz</title>
+        @else
+        <title>{{env('APP_NAME')}}</title>
+        @endif
         <link rel="shortcut icon" href="/favicon.ico">
         <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/bootstrap.min.js" defer></script>
+        {{-- <script src="/assets/js/typeahead.bundle.min.js" defer></script> --}}
         <script src="/assets/js/chartist.min.js"></script>
         <script src="/assets/js/app.js" defer></script>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -32,27 +40,31 @@
                         </button>
                         <a class="navbar-brand" href="/">Avaaz</a>
                     </div>
-                    <form action="/search" class="navbar-form navbar-left" role="search">
-                        <div class="input-group">
-                            <input type="search" name="q" class="form-control" placeholder="Search&hellip;" required>
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" title="Search" type="submit"><i class="fa fa-fw fa-lg fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
+                    
                     <div class="collapse navbar-collapse navbar-right">
+                        <form action="/search" class="navbar-form navbar-left" role="search">
+                            <input type="search" name="q" class="form-control typeahead" placeholder="Search&hellip;" required>
+                            <button type="submit" class="form-control">Go</button> 
+                        </form>
                         <ul class="nav navbar-nav">
-                            <li><a href="/help/about">About</a></li>
+                            {{-- <li><a href="/random"><i class="fa fa-random"></i></a></li> --}}
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Topics <span class="caret"></span></a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Popular Topics <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    @foreach ($topics as $topic)
-                                    <li><a href="/topics/{{$topic->slug}}">{{$topic->title}}</a></li>
-                                    @endforeach
+                                    <li><a href="/topics">All Topics</a></li>
+                                    @include ('topics.items', ['topics' => $topics])
                                 </ul>
                             </li>
+                            @if (Auth::check())
+                            <li><a href="/profile"><i class="fa fa-lg fa-user"></i></a></li>
+                            <li><a href="/settings"><i class="fa fa-lg fa-cog"></i></a></li>
+                            <li><a href="/logout"><i class="fa fa-lg fa-sign-out"></i></a></li>
+                            @endif
                         </ul>
-                        <button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#modal" data-size="modal-sm">Sign in</button>
+
+                        @if (!Auth::check())
+                        <a href="/login" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#modal" data-size="modal-sm">Sign in</a>
+                        @endif
                     </div>
                 </div>
             </nav>

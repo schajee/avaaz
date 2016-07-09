@@ -46,28 +46,7 @@
             <dt>Marketing</dt><dd>We don't share any of your personal information with third parties for direct marketing.</dd>
             <dt>Security</dt><dd>We take privacy and security seriously and have enabled HTTPS access to our site, in addition to existing SSL access over mobile devices. Also, please know that the Internet is not a secure environment, so be careful and select strong passwords.</dd>
         </dl>
-
-        <hr>
-        <h4>Contact Us</h4>
-        <div class="row">
-            <div class="col-md-6">
-                <p>If you have questions or comments about this Privacy Policy, please contact us online at:</p>
-                <address>
-                    <strong>Administrator</strong><br>
-                    <a href="mailto:#">first.last@example.com</a>
-                </address>
-            </div>
-            <div class="col-md-6">
-                <p>Or by MAIL at:</p>
-                <address>
-                    <strong>Avaaz Systems (Pvt) Ltd.</strong><br>
-                    House 16, Street 35, G-14/4<br>
-                    Islamabad 44000, PAKISTAN<br>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
-            </div>
-        </div>
-
+        
     </div>
 </section>
 @endsection

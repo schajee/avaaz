@@ -3,6 +3,7 @@
         <hr>
         <ul class="nav navbar-nav">
             <li><a href="/help/license">&copy 2016</a></li>
+            <li><a href="/help/about">About</a></li>
             <li><a href="/help/terms">Terms</a></li>
             <li><a href="/help/privacy">Privacy</a></li>
             <li><a href="/help/contact">Contact</a></li>

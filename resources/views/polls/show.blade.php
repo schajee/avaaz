@@ -5,19 +5,23 @@
     <div class="container">
 
         <article>
-            <p class="lead">{!! \App\Libraries\Common::format_topics($poll->topics) !!}</p>
+            <h1 class="poll-title"><a href="/polls/{{$poll->slug}}">{{$poll->title}}</a></h1>
             <div class="row">
-                <div class="col-md-6">
-                    <h1 class="poll-title"><a href="/polls/{{$poll->slug}}">{{$poll->title}}</a></h1>
-                    <p class="text-muted">{{$poll->description}}</p>
-                    
+                <div class="col-md-6">   
+                    @if (!is_null($poll->image))
+                    <p><img src="/assets/img/polls/{{$poll->image}}" class="img-responsive" ></p>
+                    @endif
+                    <p class="text-muted">{!!nl2br($poll->description)!!}</p>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
-                    @include ('partials.poll')
+                    @include ('polls.item')
+                    <p>
+                        
+                        {{number_format($poll->responses)}} responses
+                    </p>
                 </div>
             </div>
         </article>
-
         <hr>
         <div class="row">
             <div class="col-md-4"><div class="ct-chart ct-golden-section" id="chart1"></div></div>

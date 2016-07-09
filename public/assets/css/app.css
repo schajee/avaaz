@@ -1,7 +1,7 @@
 
 body { background-color: #212121; color: #FAFAFA; }
 a, a:active, a:hover, a:focus { color: #FAFAFA; }
-
+b, strong { font-weight: 500; }
 .poll-title { margin-top: 0; }
 .navbar { border: none; }
 
@@ -12,12 +12,25 @@ a, a:active, a:hover, a:focus { color: #FAFAFA; }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover { background-color: transparent; color: #FAFAFA; }
 
-.dropdown-menu { background-color: #424242; border: none; font-size: 0.875em; }
-.dropdown-menu>li>a { color: #FAFAFA; }
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover { background-color: #616161; color: #FAFAFA; }
+.dropdown-menu { border: none; font-size: 0.875em; }
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover { color: #616161; }
+.navbar-nav>li>.dropdown-menu { border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.navbar-toggle .icon-bar { background-color: #FAFAFA; }
+
+.submenu { font-size: 0.875em; list-style: none; padding-left: 0; margin-top: 0; min-width: 220px; }
+.submenu a { display: block; padding: 3px 30px; color: #333;}
+.submenu a:hover { text-decoration: none; color: #616161; background-color: #F5F5F5; }
+
+.navbar-nav>li.navbar-search { display: none; }
+
+.navbar-form { border: none; box-shadow: none; }
+.navbar-form .form-control { background: transparent; border-radius: 0; border-color: transparent; border-bottom-color: #616161; }
+.navbar-form .form-control:focus { border-color: transparent; border-bottom-color: #616161; box-shadow: none; color: #FAFAFA; }
+.navbar-form button.form-control { display: none; }
+
 
 .page-header { border-bottom-color: #616161; }
-article { padding-top: 45px;    }
+article { padding-top: 45px; }
 
 .link { text-decoration: underline; }
 
@@ -37,8 +50,10 @@ input { color: #333; }
 
 .results { margin-top: 8px; }
 
-dt { color: #5cb85c; }
+dt, dt a, dt a:hover, dt a:active, dt a:focus { color: #5cb85c; }
+dl.poll dd { margin-bottom: 30px; }
 
+dd span.label { color: #5cb85c; }
 
 /* Use this selector to override bar styles on bar charts. Bars are also strokes so you have maximum freedom in styling them. */
 .ct-bar { stroke: #5cb85c !important; }
@@ -53,3 +68,11 @@ dt { color: #5cb85c; }
 .ct-label { color: #FAFAFA; font-size: 0.75em; }
 .ct-grid { stroke: #333; }
 text.ct-label { fill: #212121 !important; }
+
+
+.or-hr { margin-bottom: -20px; }
+.or-txt { background-color: #fff; display: inline-block; padding: 9px; margin: 0 42%;}
+
+
+.modal-content { color: #212121 !important; }
+

@@ -39,4 +39,23 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id'     => env('FB_CLIENT_ID'),
+        'client_secret' => env('FB_CLIENT_SECRET'),
+        'redirect'      => env('APP_URL') . '/socialize/facebook',
+    ],
+
+    'google' => [
+        'client_id'     => env('GP_CLIENT_ID'),
+        'client_secret' => env('GP_CLIENT_SECRET'),
+        'redirect'      => env('APP_URL') . '/socialize/google',  
+    ],
+    
+    'twilio' => [
+        'client_url'    => 'https://demo.twilio.com/welcome/sms/reply/',
+        'client_number' => '+1 650-727-5455',
+        'client_id'     => env('TW_CLIENT_ID'),
+        'client_secret' => env('TW_CLIENT_SECRET')
+    ]
+
 ];

@@ -1,10 +1,13 @@
 <?php
+
+namespace App;
+
 use Baum\Node;
 
 /**
 * Category
 */
-class Category extends Baum\Node {
+class Category extends Node {
 
   /**
    * Table name.

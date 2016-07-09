@@ -35,26 +35,6 @@
             <dt>Complaints</dt><dd>We respect the intellectual property rights of others. We try to ensure that our content is not in violation of any intellectual property right of third parties.</dd>
             <dt>Dispute Resolution</dt><dd>In the unlikely event we end up in a legal dispute, it will take place in Islamabad courts, applying Pakistani law.</dd>
         </dl>
-        <hr>
-        <h4>Contact Us</h4>
-        <div class="row">
-            <div class="col-md-6">
-                <p>If you want to send us notices or communicate with us generally on any topic, you can contact us ONLINE at:</p>
-                <address>
-                    <strong>Administrator</strong><br>
-                    <a href="mailto:#">first.last@example.com</a>
-                </address>
-            </div>
-            <div class="col-md-6">
-                <p>Or by MAIL at:</p>
-                <address>
-                    <strong>Avaaz Systems (Pvt) Ltd.</strong><br>
-                    House 16, Street 35, G-14/4<br>
-                    Islamabad 44000, PAKISTAN<br>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
-            </div>
-        </div>
     </div>
 </section>
 @endsection

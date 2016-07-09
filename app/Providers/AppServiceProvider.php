@@ -13,8 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        view()->share('topics', \App\Topic::all());
+        view()->share('topics', \App\Topic::where('title', 'Root')->first()->getDescendants()->toHierarchy());
     }
 
     /**

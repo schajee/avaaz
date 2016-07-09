@@ -12,6 +12,25 @@ use App\Http\Requests;
 class TopicController extends Controller
 {
     /**
+     *  List all topics
+     *
+     * @param   string  $slug   Slug of the topic
+     * @return  object 
+     */
+    public function index()
+    {
+        $topics =   Topic::select('topics.*', DB::Raw('count(*) as polls'))
+                    ->join('poll_topic', 'poll_topic.topic_id', '=', 'topics.id')
+                    ->groupBy('topics.id')
+                    // ->orderBy('polls', 'desc')
+                    ->get();
+
+        return view('topics.index', [
+
+            'cloud' => $topics,
+        ]);
+    }
+    /**
      *  Show polls under a topic 
      *
      * @param   string  $slug   Slug of the topic
