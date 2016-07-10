@@ -10,19 +10,27 @@ use Illuminate\Http\Request;
 
 class PollController extends Controller
 {
-    //
+    /**
+     *  Show one poll
+     * 
+     *  @param  request $request
+     *  @param  string  $slug
+     *  @return view
+     */
     public function show(Request $request, string $slug)
     {
-        $poll = Poll::with('options.type','user','topics')->where('slug', $slug)->first();
-        $responses = Response::with('user','option')->where('user_id', Auth::user()->id)->where('poll_id', $poll->id)->get(); 
+        $poll = Poll::with('options.type')->where('slug', $slug)->first();
+        $response = Response::with('user','option')->where('user_id', Auth::user()->id)->where('poll_id', $poll->id)->first(); 
+        $responses = Response::with('user.profile','option')->where('poll_id', $poll->id)->get(); 
 
         if ($poll)
         {
             return view('polls.show', [
-                'title' => $poll->title,
-                'description' => $poll->description,
-                'poll'  => $poll,
-                'responses' => $responses,
+                'title'         => $poll->title,
+                'description'   => $poll->description,
+                'poll'          => $poll,
+                'response'      => $response,
+                'responses'     => $responses
             ]);
         }
         

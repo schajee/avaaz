@@ -75,3 +75,11 @@ $factory->define(\App\Response::class, function (Faker\Generator $faker) {
         'option_id' => $option->id, 
     ];
 });
+
+
+$factory->define(\App\Profile::class, function(Faker\Generator $faker) { 
+    foreach (\App\User::all() as $user)
+    {
+        
+    }
+});

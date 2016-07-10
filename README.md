@@ -2,15 +2,15 @@
 
 ## Official Documentation
 
-Documentation can be found on the [Avaaz website](http://avaaz.dev/docs).
+Documentation can be found on the [Avaaz website](http://avaaz.pk/docs).
 
 ## Contributing
 
-Thank you for considering contributing to Avaaz! The contribution guide can be found in the [Avaaz documentation](http://avaaz.dev/docs/contributions).
+Thank you for considering contributing to Avaaz! The contribution guide can be found in the [Avaaz documentation](http://avaaz.pk/docs/contributions).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Avaaz, please send an e-mail to Avaaz Admin at admin@avaaz.dev. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Avaaz, please send an e-mail to Avaaz Admin at admin@avaaz.pk. All security vulnerabilities will be promptly addressed.
 
 ## License
 

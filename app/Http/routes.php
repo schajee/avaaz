@@ -34,6 +34,10 @@ Route::get(     'polls/{slug}',             'PollController@show')->where('slug'
 Route::post(    'polls/{slug}',             'PollController@update')->where('slug', '[^0-9]+');
 
 
+Route::get(		'responses/{id}/delete',	'ResponseController@delete')->where('id', '[0-9]+');
+Route::delete(	'responses/{id}/destroy',	'ResponseController@destroy')->where('id', '[0-9]+');
+
+
 Route::get(     'categories',              'CategoryController@index');
 Route::get(     'categories{id}',          'CategoryController@show')->where('id', '[0-9]+');
 Route::get(     'categories/create',       'CategoryController@create');
