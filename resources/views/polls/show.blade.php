@@ -5,7 +5,7 @@
     <div class="container">
         <article>
             <p class="lead">{!!\App\Libraries\Common::format_topics($poll->topics)!!}</p>
-            <h1 class="poll-title"><a href="/polls/{{$poll->slug}}">{{$poll->title}}</a></h1>
+            <h1 class="poll-title">{{$poll->title}}</h1>
             <div class="row">
                 <div class="col-md-6">   
                     @if (!is_null($poll->image))

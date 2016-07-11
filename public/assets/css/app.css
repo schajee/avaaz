@@ -6,11 +6,11 @@ b, strong { font-weight: 500; }
 .navbar { border: none; }
 
 
-.nav>li>a { color: #9E9E9E; }
-.nav>li>a:focus, .nav>li>a:hover { background-color: transparent !important; color: #FAFAFA;}
-.navbar-btn { margin-left: 15px; }
+.navbar .nav>li>a { color: #9E9E9E; }
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover { background-color: transparent !important; color: #FAFAFA;}
+.navbar .navbar-btn { margin-left: 15px; }
 
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover { background-color: transparent; color: #FAFAFA; }
+.navbar .nav .open>a, .navbar .nav .open>a:focus, .navbar .nav .open>a:hover { background-color: transparent; color: #FAFAFA; }
 
 .dropdown-menu { border: none; font-size: 0.875em; }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover { color: #616161; }
@@ -41,7 +41,7 @@ ol { margin: 0; padding: 0; }
 p.text-muted { color: #9E9E9E; }
 
 .panel { background-color: #424242; }
-.panel-body { padding: 15px 25px;}
+.panel-body { padding: 15px 25px; }
 
 hr { border-top-color: #616161; }
 
@@ -71,7 +71,8 @@ text.ct-label { fill: #212121 !important; }
 
 
 .or-hr { margin-bottom: -20px; }
-.or-txt { background-color: #fff; display: inline-block; padding: 9px; margin: 0 42%;}
+.or-txt { background-color: #fff; display: inline-block; padding: 6px 10px; margin: 0 50% 0 0;}
+hr.gap { border-top-color: transparent; }
 
 
 .modal-content { color: #212121 !important; }
@@ -96,7 +97,21 @@ text.ct-label { fill: #212121 !important; }
 	}
 }
 
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus { outline: none; }
+.btn.active, .btn:active { box-shadow: none; }
+.btn-cancel { color: #9E9E9E; }
+.btn.focus, .btn:focus, .btn:hover { color: #FAFAFA; }
+
+.nav-pills a { color: #9E9E9E; }
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover { background-color: #5cb85c; }
+.nav-pills.nav>li>a:hover { background-color: transparent !important; color: #FAFAFA;}
+
+.auth-form h4 { margin-bottom: 30px;  }
+.auth-form input.form-control { background-color: transparent; border: none; border-bottom: thin solid #616161; border-radius: 0; color: #FAFAFA; box-shadow: none; }
+.auth-form input.form-control:focus { box-shadow: none; }
+.auth-form .panel-body { padding-bottom: 25px; }
 
 
 .footer ul { list-style: none; padding-left: 0; margin-top: 0; }
 .footer li { display: inline-block; margin-right: 15px; }
+

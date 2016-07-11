@@ -50,9 +50,10 @@ class AuthController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    public function create()
+    public function index(Request $request)
     {
-        return view('auth.register');
+        // $request->session()->put('return', $request->header('referer'));
+        return view('auth.login');
     }
 
     /**
@@ -70,15 +71,22 @@ class AuthController extends Controller
         // ]);
     }
 
-    /**
-     * Show the login form
-     *
-     * @param  array  $data
-     * @return User
-     */
-    public function edit()
+    public function update(Request $request)
     {
-        return view('auth.login');
+        $field = filter_var($request->identity, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
+
+        $this->validate($request, [
+            'identity'  => 'required|exists:users,'.$field.',active,1',
+            'password'  => 'required',
+        ]);
+
+        if (Auth::attempt([$field => $request->identity, 'password' => $request->password, 'active' => 1], true))
+        {
+            return redirect()->intended('/');
+        }
+
+        $request->session()->flash('status', 'Invalid email/phone or password');
+        return back();
     }
 
     /**
@@ -121,10 +129,25 @@ class AuthController extends Controller
     /**
      * Logs out the user; returns to home or back
      */
-    public function getLogout(Request $request)
+    public function forgot(Request $request)
+    {
+        // Auth::logout();
+        // $request->session()->flush();
+        // return redirect('/');
+    }
+
+    /**
+     * Logs out the user; returns to home or back
+     */
+    public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->flush();
-        return redirect('/');
-    }    
+        return redirect()->intended('/');
+    }
+
+    public function password (Request $request, string $pwd)
+    {
+        return bcrypt($pwd);
+    }
 }

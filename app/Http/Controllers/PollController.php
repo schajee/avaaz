@@ -11,6 +11,15 @@ use Illuminate\Http\Request;
 class PollController extends Controller
 {
     /**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      *  Show one poll
      * 
      *  @param  request $request

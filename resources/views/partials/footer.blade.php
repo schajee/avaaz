@@ -11,6 +11,5 @@
         </ul>
     </div>
 </footer>
-@include ('partials.modal')
 </body>
 </html>

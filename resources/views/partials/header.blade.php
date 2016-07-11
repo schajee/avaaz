@@ -69,12 +69,12 @@
                             @if (Auth::check())
                             <li><a href="/profile"><i class="fa fa-lg fa-user"></i></a></li>
                             <li><a href="/settings"><i class="fa fa-lg fa-cog"></i></a></li>
-                            <li><a href="/logout"><i class="fa fa-lg fa-sign-out"></i></a></li>
+                            <li><a href="/auth/logout"><i class="fa fa-lg fa-sign-out"></i></a></li>
                             @endif
                         </ul>
 
                         @if (!Auth::check())
-                        <a href="/login" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#modal" data-size="modal-sm">Sign in</a>
+                        <a href="/auth" class="btn btn-success navbar-btn">Log in</a>
                         @endif
                     </div>
                 </div>

@@ -12,6 +12,7 @@
             <input type="hidden" name="_method" value="DELETE">
             {!! csrf_field() !!}
             <button type="submit" class="btn btn-success">Yes I'm sure</button>
+            <a href="/polls/{{$response->poll->slug}}" class="btn btn-cancel">Cancel</a>
         </form>
     </div>
 </section>
