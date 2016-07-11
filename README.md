@@ -2,11 +2,11 @@
 
 ## Official Documentation
 
-Documentation can be found on the [Avaaz website](http://avaaz.pk/docs).
+Documentation can be found on the [Avaaz website](https://avaaz.pk).
 
 ## Contributing
 
-Thank you for considering contributing to Avaaz! The contribution guide can be found in the [Avaaz documentation](http://avaaz.pk/docs/contributions).
+Thank you for considering contributing to Avaaz! The contribution guide can be found in the [Avaaz documentation](https://avaaz.pk/docs/contributions).
 
 ## Security Vulnerabilities
 
